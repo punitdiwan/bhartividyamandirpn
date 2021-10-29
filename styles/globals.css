@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.stickyt {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+ 
+
+*{
+  font-family: "Helvetica Neue,Helvetica, Arial, sans-serif"
+}
+#menu-toggle:checked+#menu {
+display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
+.shadow1{
+box-shadow: rgba(0, 0, 0, 0.96) 0px 22px 70px 4px;
+
+}
+
+h1{
+  font-size: 2rem !important;
+  font-weight: bold;
+}
+h2{
+  font-size: 1.5rem !important;
+  font-weight: bold;
+}
+h3{
+  /* font-size: 1.3rem !important; */
+  font-weight: bold;
+}
+h4{
+  /* font-size: 1rem !important; */
+  font-weight: bold;
+}
+h5{
+  /* font-size: 0.8rem !important; */
+  font-weight: bold;
+}
+h6{
+  /* font-size:0.7rem !important; */
+  font-weight: bold;
+}
+
+.myLine{
+  border:1px solid red;
+  margin-top:2px;
+  margin-bottom:2px;
+}
+ 
+
+
+.SRLCaptionText,
+.carousel .carousel-status {
+  display: none;
+}
+.carousel .control-dots .dot {
+  display: none !important;
+}
+
+.carousel.carousel-slider .control-arrow {
+  display: none !important;
+}
+.react-calendar {
+  width: 96% !important;
+}
