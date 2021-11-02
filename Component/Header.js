@@ -1,7 +1,7 @@
-import React, { Component,useState,useEffect } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Link from "next/link";
 
-const Header = ({header_data}) => { 
+const Header = ({ header_data }) => {
 
 
   const [abovetop, setabovetop] = useState("8rem")
@@ -9,12 +9,12 @@ const Header = ({header_data}) => {
 
 
   useEffect(() => {
-       document.addEventListener("scroll", () => { 
-        const backgroundColor  = window.scrollY<1  ?(window.innerWidth<1024?("white"):("white")) : ("#cbdcf8");
-        setaboveBackground(backgroundColor)
-        const top = window.scrollY<1  ?(window.innerWidth<1024?("8rem"):("8rem")) : ("0px");
-        setabovetop(top);
-          
+    document.addEventListener("scroll", () => {
+      const backgroundColor = window.scrollY < 1 ? (window.innerWidth < 1024 ? ("white") : ("white")) : ("#cbdcf8");
+      setaboveBackground(backgroundColor)
+      const top = window.scrollY < 1 ? (window.innerWidth < 1024 ? ("8rem") : ("8rem")) : ("0px");
+      setabovetop(top);
+
     });
 
   }, [])
@@ -23,25 +23,24 @@ const Header = ({header_data}) => {
       <div className=" ">
         <div
           className="flex justify-center h-32 pt-3 text-center bg-header bg-[#CBDCF8] bg-repeat-x  "
-          
+
         >
           <img
             className="h-20 w-15 md:mr-1 "
-            src={header_data?.data? header_data?.data[0]?.logo?.data?.full_url : "https://rosemarydn.com/images/logo.png"}
-            //  src="https://rosemarydn.com/images/logo.png"
+            src={header_data?.data ? header_data?.data[0]?.logo?.data?.full_url : "/images/logo.png"}
           />
           <div className="  text-[#272d57] item-center ">
             <span className="font-serif text-xl tracking-normal ml-1 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl" >
-            {header_data?.data? header_data?.data[0]?.title : "Maitretech Academy Public School"}
-              {/* Rose Mary Hr. Sec. School */}
+              {header_data?.data ? header_data?.data[0]?.title : "Maitretech Academy Public School"}
+
             </span>
             <p className=" flex ml-10 md:ml-2 md:justify-center font-medium md:font-semibold">
-            {header_data?.data? header_data?.data[0]?.address : "  Dwarka Nagar Bhopal"}
-              {/* Dwarka Nagar Bhopal */}
+              {header_data?.data ? header_data?.data[0]?.address : "  Dwarka Nagar Bhopal"}
+
             </p>
           </div>
         </div>
-        <nav className="z-10 shadow-sm stickyt flex flex-wrap items-center justify-center bg-white md:py-3  lg:py-3   " style={{  top: `${abovetop}`,backgroundColor:`${aboveBackground}`}}>
+        <nav className="z-10 shadow-sm stickyt flex flex-wrap items-center justify-center bg-white md:py-3  lg:py-3   " style={{ top: `${abovetop}`, backgroundColor: `${aboveBackground}` }}>
           <label
             className="items-center block px-3 py-2 text-black border border-teal-400 rounded cursor-pointer lg:hidden hover:border-white"
             htmlFor="menu-toggle"
@@ -80,7 +79,7 @@ const Header = ({header_data}) => {
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </button>
-                  <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu lg:ml-[45px] ">
+                  <ul className="absolute z-20 hidden pt-0 pb-0   text-gray-700 dropdown-menu lg:ml-[45px] ">
                     <li className="border-b border-gray-700 ">
                       <Link href="/AboutUs">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
@@ -92,21 +91,21 @@ const Header = ({header_data}) => {
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
                       <Link href="/DirectorMessage">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
-                          Director Message
+                          Director&nbsp;Message
                         </a>
                       </Link>
                     </li>
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
                       <Link href="/ManagementDesk">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
-                          Management Desk
+                          Management&nbsp;Message
                         </a>
                       </Link>
                     </li>
                     <li className="border-b border-gray-700 ">
                       <Link href="/PrincipalMessage">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
-                          Principal Messagem
+                          Principal&nbsp;Message
                         </a>
                       </Link>
                     </li>
@@ -131,7 +130,7 @@ const Header = ({header_data}) => {
                         className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] text-yellow-50 hover:no-underline hover:bg-white hover:text-black"
                         href="/AdmissionProcedure"
                       >
-                        Admission Procedure
+                        Admission&nbsp;Procedure
                       </a>
                     </li>
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
@@ -142,34 +141,34 @@ const Header = ({header_data}) => {
                         Facilities
                       </a>
                     </li>
-                   
-                     
+
+
                   </ul>
                 </div>
               </a>
-             <Link  href="/Gallery">
-              <a
-                
-                className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline"
-              >
-                Gallery
-              </a>
-             </Link>
-             <Link  href="/Contactus">
-              <a
-                href="/Contactus"
-                className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline"
-              >
-                Contact us
-              </a>
+              <Link href="/Gallery">
+                <a
+
+                  className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline"
+                >
+                  Gallery
+                </a>
               </Link>
-              <Link  href="#">
-              <a
-                className="block px-2 py-2 mt-2 text-sm leading-none text-center text-white bg-red-500 border rounded lg:ml-28 lg:inline-block hover:border-transparent lg:mt-0"
-              >
-                Login 
-                
-              </a>
+              <Link href="/Contactus">
+                <a
+                  href="/Contactus"
+                  className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline"
+                >
+                  Contact us
+                </a>
+              </Link>
+              <Link href="https://cms.schoolscoop.co.in/admin/#/login?project=bhartividyamandirpn">
+                <a target="_blank"
+                  className="block px-2 py-2 mt-2 text-sm leading-none text-center text-white bg-red-500 border rounded lg:ml-28 lg:inline-block hover:border-transparent lg:mt-0"
+                >
+                  Login
+
+                </a>
               </Link>
               {/* <Link  href="#">
               <a
