@@ -4,7 +4,7 @@ import Layout from "../Component/Layout";
 const Facilities =({ data_header })=>  {
     return (
     <Layout header_data={data_header} >
-      <div className="w-full h-full pl-5   bg-no-repeat bg-cover bg-Facilities pt-16 ">
+      <div className="w-full h-full pl-5   bg-no-repeat bg-cover bg-Admission pt-16 ">
           <div className="w-10/12 pt-5 pb-5 font-serif mx:10 sm:mx-16">
             <h2 className="!text-3xl flex pt-2 font-serif text-[#009043] bg-yellow-50 pl-3  h-[60px] ">
               Facilities
@@ -14,14 +14,14 @@ const Facilities =({ data_header })=>  {
         <div className="w-10/12 pb-5 mx:10 sm:mx-20 !mt-5 !md:mt-10">
           <h2 className="!text-3xl flex flex-row text-[#164e30]  w-10/12">
             Lab
-            <img src="https://rosemarydn.com/images/star.gif  " />
+            <img src="/images/star.gif  " />
           </h2>
           <p>
             The facilities offered to the students include will equipped.
             science laboratories well stacked.
           </p>
           <h2 className="text-[#164e30] !text-3xl mt-2 flex flex-row  w-10/12">
-            Yoga <img src="https://rosemarydn.com/images/star.gif  " />
+            Yoga <img src="/images/star.gif  " />
           </h2>
           <p>
             Yoga musicroom and the meditation room a spacious multi purpose hall
@@ -30,7 +30,7 @@ const Facilities =({ data_header })=>  {
           </p>
           <h2 className="text-[#164e30]  flex flex-row mt-2 !text-3xl w-10/12">
             Science Lab
-            <img src="https://rosemarydn.com/images/star.gif  " />
+            <img src="/images/star.gif  " />
           </h2>
           <p>
             The school has well equipped Biology, Physics and Chemistry labs
@@ -38,7 +38,7 @@ const Facilities =({ data_header })=>  {
           </p>
           <h2 className="text-[#164e30] flex flex-row  mt-2 w-10/12 !text-3xl">
             Biology Lab
-            <img src="https://rosemarydn.com/images/star.gif  " />
+            <img src="/images/star.gif  " />
           </h2>
           <p>
             Practical work plays an important role in understanding the basic
@@ -57,7 +57,7 @@ const Facilities =({ data_header })=>  {
           </p>
           <h2 className="text-[#164e30] flex flex-row mt-2 w-10/12 !text-3xl">
             Chemistry Lab
-            <img src="https://rosemarydn.com/images/star.gif  " />
+            <img src="/images/star.gif  " />
           </h2>
           <p>
             The chemistry lab in Rose Mary Hr. Sec. School is well equipped with
@@ -72,7 +72,7 @@ const Facilities =({ data_header })=>  {
           </p>
           <h2 className="text-[#164e30] flex flex-row mt-2 w-10/12 !text-3xl">
             Physics Lab
-            <img src="https://rosemarydn.com/images/star.gif  " />
+            <img src="/images/star.gif  " />
           </h2>
           <p>
             Physics is such an interesting subject that every student has his
@@ -88,7 +88,7 @@ const Facilities =({ data_header })=>  {
             As to give answers to these practicals are conducted.
           </p>
           <h2 className="text-[#164e30] flex flex-row  mt-2 w-10/12 !text-3xl">
-            Computer Lab <img src="https://rosemarydn.com/images/star.gif  " />
+            Computer Lab <img src="/images/star.gif  " />
           </h2>
           <p>
             We have two full fledged computer labs one for primary and the other
@@ -97,7 +97,7 @@ const Facilities =({ data_header })=>  {
           </p>
           <h2 className="text-[#164e30] flex flex-row mt-2  w-10/12 !text-3xl">
             Indoor / Out Door Sports
-            <img src="https://rosemarydn.com/images/star.gif  " />
+            <img src="/images/star.gif  " />
           </h2>
           <p className="mb-10">
             Extensive and well maintained play fields of football and cricket

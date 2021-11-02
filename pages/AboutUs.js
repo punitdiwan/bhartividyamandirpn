@@ -35,15 +35,15 @@ const AboutUs = ({ data_header }) => {
   return (
     <Layout header_data={data_header}>
       <div
-        className="mx-3 "
+        className="mx-3 mt-10"
       >
         <img
           className="w-full "
-          src="https://rosemarydn.com/images/upper.png"
+          src="/images/upper.png"
         />
         <div className="leading-[ 22.5px] font-normal">
           <h5 className="text-center">
-            {data?.heading || "About School"}
+            {data?.heading}
             {/* About us */}
 
           </h5>
@@ -55,7 +55,7 @@ const AboutUs = ({ data_header }) => {
         </div>
         <img
           className="w-full"
-          src="https://rosemarydn.com/images/under.png"
+          src="/images/lower.png"
         />
       </div>
     </Layout>
