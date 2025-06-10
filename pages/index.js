@@ -3,8 +3,9 @@ import Layout from "../Component/Layout";
 import SchoolMassage from '../pages/SchoolMassage'
 import Slider from '../pages/Slider'
 import HomeEvents from '../pages/HomeEvents'
+import ReactGA from "react-ga4";
 
-
+ReactGA.initialize("G-XXXXXXXXXX");
 export default function Home({ data_header, slider_data }) { 
   
   return (
