@@ -5,7 +5,7 @@ import Slider from '../pages/Slider'
 import HomeEvents from '../pages/HomeEvents'
 import ReactGA from "react-ga4";
 
-ReactGA.initialize("G-XXXXXXXXXX");
+ReactGA.initialize("G-6FNQPVVM2S");
 export default function Home({ data_header, slider_data }) { 
   
   return (
