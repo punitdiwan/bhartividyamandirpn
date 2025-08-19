@@ -20,7 +20,7 @@ const PrincipalMessage = ({ data_header, principle_data }) => {
               {" "}
               <img
                 className="shadow-2xl rounded-2 shadow1  "
-                src={principle_data?.data?.length > 0 ? principle_data?.data[0]?.photo?.data?.full_url : "/images/demo2.jpg"}
+                src={principle_data?.data?.length > 0 ? principle_data?.data[0]?.photo?.data?.full_url?.replace('http://', 'https://') : "/images/demo2.jpg"}
                 // src="https://rosemarydn.com/images/principle.png"
                 style={{ width: "100%", height: "300px" }}
                 alt="Card image cap"

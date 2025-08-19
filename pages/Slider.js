@@ -18,13 +18,13 @@ const Slider = ({ slider_data }) => {
 
   return (
     <div>
-      <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}  >
+      <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} className="mt-14"  >
         {slider_data?.data?.length > 0 ?
             slider_data?.data?.map((item, index) => {
               return <div className="carousel-inner" role="listbox" key={index} >
                 <div className='carousel' role="listbox">
                   <img
-                    src={item?.image?.data?.full_url}
+                    src={item?.image?.data?.full_url?.replace('http://', 'https://')}
                     className="w-full md:h-[400px] lg:h-[500px] h-[230px]"
                     alt="sorry_no_img"
                   />

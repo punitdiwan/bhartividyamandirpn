@@ -19,7 +19,7 @@ const DirectorMessage = ({ data_header, director_data }) => {
             {" "}
             <img
               className="shadow-2xl rounded-2 shadow1  "
-              src={director_data?.data?.length > 0 ? director_data?.data[1]?.photo?.data?.full_url : "/images/demo3.jpg"}
+              src={director_data?.data?.length > 0 ? director_data?.data[1]?.photo?.data?.full_url?.replace('http://', 'https://') : "/images/demo3.jpg"}
  
               style={{ width: "100%", height: "300px" }}
               alt="Card image cap"
