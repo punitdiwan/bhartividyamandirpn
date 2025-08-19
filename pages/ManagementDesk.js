@@ -19,7 +19,7 @@ const ManagementDesk = ({ data_header,chairman_data }) => {
             {" "}
             <img
               className="shadow-2xl rounded-2  shadow1 "
-              src={chairman_data?.data?.length > 0? chairman_data?.data[2]?.photo?.data?.full_url : "/images/demo1.jpg"}
+              src={chairman_data?.data?.length > 0? chairman_data?.data[2]?.photo?.data?.full_url?.replace('http://', 'https://') : "/images/demo1.jpg"}
               // src="https://rosemarydn.com/images/skmishra.JPG"
               alt="Card image cap"
               style={{ width: "100%", height: "300px" }}

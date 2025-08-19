@@ -101,7 +101,7 @@ const HomeEvents = () => {
 
             </div>
             <div className="mx-3">
-                <h1 className="py-2 text-center text-[white] "><b> Topper (2019-2020)</b></h1>
+                <h1 className="py-2 text-center text-[white] "><b> Topper (2024-2025)</b></h1>
 
                 <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}   >
                     {
@@ -110,7 +110,7 @@ const HomeEvents = () => {
                             return <div className="carousel-inner" role="listbox" key={index} >
                                 <div className='carousel ' role="listbox" style={{ marginTop: "15px" }}>
                                     <img
-                                        src={item?.photo?.data?.full_url}
+                                        src={item?.photo?.data?.full_url?.replace('http://', 'https://')}
                                         style={{ height: "250px", width: "100%", border: "1px solid #ccc" }}
                                         alt="sorry_no_img"
                                     />
