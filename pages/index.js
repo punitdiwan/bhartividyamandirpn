@@ -36,7 +36,7 @@ export async function getStaticProps(context) {
 
   let slider_data
   try {
-    const response1 = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/${process.env.NEXT_PUBLIC_SCHOOL}/items/slider?status=published&fields=caption,image.data.full_url`)
+    const response1 = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/${process.env.NEXT_PUBLIC_SCHOOL}/items/slider?status=published&fields=*.*.*`)
 
     slider_data = await response1.json()
   }
