@@ -19,7 +19,7 @@ const Slider = ({ slider_data }) => {
         infiniteLoop={true}
         interval={3000}
         showStatus={false}
-        className="mt-14"
+        className="mt-16"
 
         renderArrowPrev={(onClickHandler, hasPrev, label) =>
           hasPrev && (
@@ -27,7 +27,7 @@ const Slider = ({ slider_data }) => {
               type="button"
               onClick={onClickHandler}
               title={label}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 text-white p-3 rounded-full hover:bg-white hover:text-black transition"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 text-white p-3 rounded-full hover:bg-white hover:text-black transition mt-12"
             >
               <IoIosArrowBack size={26} />
             </button>
@@ -40,7 +40,7 @@ const Slider = ({ slider_data }) => {
               type="button"
               onClick={onClickHandler}
               title={label}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 text-white p-3 rounded-full hover:bg-white hover:text-black transition"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 text-white p-3 rounded-full hover:bg-white hover:text-black transition mt-12"
             >
               <IoIosArrowForward size={26} />
             </button>
@@ -52,7 +52,7 @@ const Slider = ({ slider_data }) => {
             <div key={index}>
               <img
                 src={item?.image?.data?.full_url?.replace("http://", "https://")}
-                className="w-full md:h-[400px] lg:h-[500px] h-[230px] object-cover"
+                className="relative w-full h-[300px] md:h-[500px] lg:h-[640px]"
                 alt="slider_img"
               />
             </div>
@@ -62,7 +62,7 @@ const Slider = ({ slider_data }) => {
               <img
                 src={slide.title}
                 alt="slider_img"
-                className="w-full md:h-[400px] lg:h-[500px] h-[230px] object-cover"
+                className="relative w-full h-[300px] md:h-[500px] lg:h-[640px]"
               />
             </div>
           ))}

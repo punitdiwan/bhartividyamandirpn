@@ -96,6 +96,7 @@ const AdmissionBanner = () => {
                             minHeight: '30vh', // Allow modal height to adjust based on content
                             maxHeight: '90vh', // Limit the height for larger screens
                             overflow: 'hidden',
+                            marginTop:"80px"
                         }}
                     >
                         {/* Close button */}
