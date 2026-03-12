@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 const Footer = ({header_data}) => {
 
-  // console.log(header_data)
   
   return (
     <>

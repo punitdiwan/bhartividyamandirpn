@@ -75,6 +75,6 @@ export async function getStaticProps(context) {
 
   return {
     props: { data_header, gallery_data },
-    revalidate: 1,
+    revalidate: 86400,
   };
 }

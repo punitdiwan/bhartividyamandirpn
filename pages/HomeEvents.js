@@ -106,7 +106,7 @@ const HomeEvents = () => {
                 <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}   >
                     {
                         data?.data?.data.map((item, index) => {
-                            console.log(item)
+                            
                             return <div className="carousel-inner" role="listbox" key={index} >
                                 <div className='carousel ' role="listbox" style={{ marginTop: "15px" }}>
                                     <img

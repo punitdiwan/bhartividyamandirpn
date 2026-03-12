@@ -100,6 +100,6 @@ export async function getStaticProps(context) {
 
   return {
     props: { data_header, principle_data },
-    revalidate: 1, // will be passed to the page component as props
+    revalidate: 86400,
   }
 }

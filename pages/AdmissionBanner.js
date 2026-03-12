@@ -13,13 +13,11 @@ const AdmissionBanner = () => {
         try {
             const res = await fetch(`${baseUrl}/${school}/items/admission_banner?fields=*.*.*`);
             const data = await res.json();
-            console.log("Fetched data:", data);  // Log the full fetched data
 
             setBanner(data.data);
 
             if (data.data && data.data.length > 0) {
                 const bannerData = data.data[0];
-                console.log("bannerData:", bannerData);  // Log banner data
 
                 setShowBanner(bannerData.show_banner); // Set show_banner to decide whether to show the modal
             }
@@ -53,11 +51,9 @@ const AdmissionBanner = () => {
 
     // Get the image URL from the banner's data
     const getImageUrl = (bannerData) => {
-        console.log("bannerData", bannerData);
 
         // Access the full URL correctly based on the structure of your data
         const url = bannerData?.admission_banner?.data?.full_url?.replace('http://', 'https://');
-        console.log("Image URL:", url);  // Log the URL to verify it's correct
         return url || ''; // Return the URL or an empty string if not found
     };
 
