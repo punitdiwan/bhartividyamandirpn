@@ -4,7 +4,7 @@ import Layout from "../Component/Layout";
 const Contactus = ({data_header}) => {
 
 
-  console.log(data_header)
+  // console.log(data_header)
   return (
     <Layout  header_data={data_header}>
       <div className="flex flex-col mb-10 lg:mx-28 pt-20 ">
