@@ -4,12 +4,12 @@ import axios from 'axios';
 import Layout from "../Component/Layout";
 
 const DirectorMessage = ({ data_header, director_data }) => {
- 
 
+  console.log(director_data, "director_data")
   return (
     <Layout header_data={data_header}>
       <div className="lg:mt-[60px]">
-      <img className="w-full" src="/images/upper.png" />
+        <img className="w-full" src="/images/upper.png" />
 
         <div className="grid gap-10 mx-10 sm:grid-cols-3 ">
 
@@ -19,8 +19,8 @@ const DirectorMessage = ({ data_header, director_data }) => {
             {" "}
             <img
               className="shadow-2xl rounded-2 shadow1  "
-              src={director_data?.data?.length > 0 ? director_data?.data[1]?.photo?.data?.full_url?.replace('http://', 'https://') : "/images/demo3.jpg"}
- 
+              src={director_data?.data?.length > 0 ? director_data?.data[1]?.photo?.data?.full_url?.replace("http://", "https://") : "/images/demo3.jpg"}
+
               style={{ width: "100%", height: "300px" }}
               alt="Card image cap"
             />
@@ -91,7 +91,7 @@ export async function getStaticProps(context) {
 
   return {
     props: { data_header, director_data },
-    revalidate: 86400,
+    revalidate: 86400, // 24 hours - reduces serverless invocations on Vercel Pro
   }
 
 }

@@ -5,42 +5,42 @@ const Header = ({ header_data }) => {
 
 
   const [abovetop, setabovetop] = useState("8rem")
-  const [aboveBackground, setaboveBackground] = useState("white")
 
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
-      const backgroundColor = window.scrollY < 1 ? (window.innerWidth < 1024 ? ("white") : ("white")) : ("#cbdcf8");
-      setaboveBackground(backgroundColor)
+
       const top = window.scrollY < 1 ? (window.innerWidth < 1024 ? ("8rem") : ("8rem")) : ("0px");
       setabovetop(top);
 
     });
+
 
   }, [])
   return (
     <>
       <div className=" ">
         <div
-          className="flex justify-center h-32 pt-3 text-center bg-header bg-[#CBDCF8] bg-repeat-x  "
+          className="flex justify-center h-32 pt-3 text-center bg-header bg-[#1b3359] bg-repeat-x "
 
         >
           <img
-            className="h-20 w-15 md:mr-1 "
-            src={header_data?.data ? header_data?.data[0]?.logo?.data?.full_url?.replace('http://', 'https://') : "/images/logo.png"}
+            className="h-20 w-15 md:mr-10 "
+            src={header_data?.data ? header_data?.data[0]?.logo?.data?.full_url.replace("http://", "https://") : "https://cms.maitretech.com/uploads/bhartividyamandirpn/originals/a75ae161-3d37-4718-b0c2-67571f031660.png"}
+          //  src="https://rosemarydn.com/images/logo.png"
           />
-          <div className="  text-[#272d57] item-center ">
-            <span className="font-serif text-xl tracking-normal ml-1 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl" >
-              {header_data?.data ? header_data?.data[0]?.title : "Maitretech Academy Public School"}
-
+          <div className="mt-1 text-white item-center ml-1 ">
+            <span className="font-serif text-xl tracking-normal sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl" >
+              {header_data?.data ? header_data?.data[0]?.title : "Maitretech Academy"}
+              {/* Rose Mary Hr. Sec. School */}
             </span>
-            <p className=" flex ml-10 md:ml-2 md:justify-center font-medium md:font-semibold">
+            <p className="mt-2 mr-2 sm:justify-items-center text-white ">
               {header_data?.data ? header_data?.data[0]?.address : "  Dwarka Nagar Bhopal"}
-
+              {/* Dwarka Nagar Bhopal */}
             </p>
           </div>
         </div>
-        <nav className="z-10 shadow-sm stickyt flex flex-wrap items-center justify-center bg-white md:py-3  lg:py-3   " style={{ top: `${abovetop}`, backgroundColor: `${aboveBackground}` }}>
+        <nav className="z-10 shadow-sm stickyt flex flex-wrap items-center justify-center bg-white md:py-3  lg:py-3   " style={{ top: `${abovetop}` }}>
           <label
             className="items-center block px-3 py-2 text-black border border-teal-400 rounded cursor-pointer lg:hidden hover:border-white"
             htmlFor="menu-toggle"
@@ -60,11 +60,9 @@ const Header = ({ header_data }) => {
             className="flex-grow hidden w-full lg:flex lg:items-center  lg:w-auto "
             id="menu"
           >
-            <div className="   text-sm lg:flex-grow sm:pl-0 lg:pl-40 ">
+            <div className="   text-sm lg:flex-grow sm:pl-0 lg:pl-60 ">
               <Link href="/" className="block mt-2 mr-4 text-center text-black hover:no-underline lg:inline-block lg:mt-0">
-
-                  Home
-
+                Home
               </Link>
 
               <div className="block text-center lg:inline-block">
@@ -79,34 +77,32 @@ const Header = ({ header_data }) => {
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </button>
-                  <ul className="absolute z-20 hidden pt-0 pb-0   text-gray-700 dropdown-menu lg:ml-[45px] ">
+                  <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu lg:ml-[45px] ">
                     <li className="border-b border-gray-700 ">
-                      <Link href="/AboutUs" className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
-
-                          About Us
-
+                      <Link href="/AboutUs" className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
+                        About Us
                       </Link>
                     </li>
 
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
-                      <Link href="/DirectorMessage" className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
- 
-                          Director&nbsp;Message
- 
+                      <Link href="/DirectorMessage" className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
+                        Director&nbsp;Message
                       </Link>
                     </li>
-                    <li className="border-b border-gray-700 hover:border-b hover:border-black ">
-                      <Link href="/ManagementDesk" className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
 
-                          Management&nbsp;Message
-
+                    <li className="border-b border-gray-700 ">
+                      <Link href="/PrincipalMessage" className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
+                        Principal&nbsp;Message
                       </Link>
                     </li>
                     <li className="border-b border-gray-700 ">
-                      <Link href="/PrincipalMessage" className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
-
-                          Principal&nbsp;Message
-
+                      <Link href="/OurMangment" className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
+                        Management&nbsp;Message
+                      </Link>
+                    </li>
+                    <li className="border-b border-gray-700 ">
+                      <Link href="/Faculty" className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
+                        Faculties
                       </Link>
                     </li>
                   </ul>
@@ -126,57 +122,36 @@ const Header = ({ header_data }) => {
                   </button>
                   <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu lg:ml-[45px]">
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
-                      <a
-                        className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] text-yellow-50 hover:no-underline hover:bg-white hover:text-black"
+                      <Link
+                        className="block px-4 py-2 whitespace-no-wrap bg-blue-600 text-yellow-50 hover:no-underline hover:bg-white hover:text-black"
                         href="/AdmissionProcedure"
                       >
                         Admission&nbsp;Procedure
-                      </a>
+                      </Link>
                     </li>
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
-                      <a
-                        className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] text-yellow-50 hover:bg-white hover:no-underline hover:text-black"
+                      <Link
+                        className="block px-4 py-2 whitespace-no-wrap bg-blue-600 text-yellow-50 hover:bg-white hover:no-underline hover:text-black"
                         href="/Facilities"
                       >
                         Facilities
-                      </a>
+                      </Link>
                     </li>
 
 
                   </ul>
                 </div>
               </div>
-              <Link href="/Gallery"
-                
-
-                  className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline"
-                >
-                  Gallery
-                
+              <Link href="/Gallery" className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline">
+                Gallery
               </Link>
-              <Link href="/Contactus"
-                
-                
-                  className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline"
-                >
-                  Contact us
-                              </Link>
-              <Link href="https://cms.schoolscoop.co.in/admin/#/login?project=bhartividyamandirpn"
-                 target="_blank"
-                  className="block px-2 py-2 mt-2 text-sm leading-none text-center text-white bg-red-500 border rounded lg:ml-28 lg:inline-block hover:border-transparent lg:mt-0"
-                >
-                  Login
-
-                
+              <Link href="/Contactus" className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline">
+                Contact us
               </Link>
-              {/* <Link  href="#">
-              <a
-                className="block px-2 py-2 mt-2 text-sm leading-none text-center text-white bg-[#132f57] border rounded lg:ml-28 lg:inline-block hover:border-transparent lg:mt-0"
-              >
-             Pay Online
-                
-              </a>
-              </Link> */}
+              <Link href="https://cms.schoolscoop.co.in/admin/#/login?project=bhartividyamandirpn" target="_blank" className="block px-2 py-2 mt-2 text-sm leading-none text-center text-white bg-red-500 border rounded lg:ml-28 lg:inline-block hover:border-transparent lg:mt-0">
+                Login
+              </Link>
+
             </div>
           </div>
         </nav>
@@ -185,3 +160,4 @@ const Header = ({ header_data }) => {
   );
 };
 export default Header;
+

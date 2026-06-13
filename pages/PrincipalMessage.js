@@ -13,14 +13,14 @@ const PrincipalMessage = ({ data_header, principle_data }) => {
   return (
     <Layout header_data={data_header}>
       <div className="lg:mt-[60px]">
-      <img className="w-full" src="/images/upper.png" />
+        <img className="w-full" src="/images/upper.png" />
         <div className="grid gap-10 mx-10 sm:grid-cols-3 ">
           <div className="flex justify-center text-center ">
             <div className=" sm:h-8/12 sm:w-8/12 sm:mt-10" >
               {" "}
               <img
                 className="shadow-2xl rounded-2 shadow1  "
-                src={principle_data?.data?.length > 0 ? principle_data?.data[0]?.photo?.data?.full_url?.replace('http://', 'https://') : "/images/demo2.jpg"}
+                src={principle_data?.data?.length > 0 ? principle_data?.data[0]?.photo?.data?.full_url?.replace("http://", "https://") : "/images/demo2.jpg"}
                 // src="https://rosemarydn.com/images/principle.png"
                 style={{ width: "100%", height: "300px" }}
                 alt="Card image cap"
@@ -100,6 +100,6 @@ export async function getStaticProps(context) {
 
   return {
     props: { data_header, principle_data },
-    revalidate: 86400,
+    revalidate: 86400, // 24 hours - reduces serverless invocations on Vercel Pro
   }
 }
