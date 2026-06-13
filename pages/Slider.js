@@ -19,7 +19,7 @@ const Slider = ({ slider_data }) => {
         infiniteLoop={true}
         interval={3000}
         showStatus={false}
-        className="mt-16"
+        className="mt-14"
 
         renderArrowPrev={(onClickHandler, hasPrev, label) =>
           hasPrev && (
@@ -27,7 +27,7 @@ const Slider = ({ slider_data }) => {
               type="button"
               onClick={onClickHandler}
               title={label}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 text-white p-3 rounded-full hover:bg-white hover:text-black transition mt-12"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 text-white p-3 rounded-full hover:bg-white hover:text-black transition"
             >
               <IoIosArrowBack size={26} />
             </button>
@@ -40,7 +40,7 @@ const Slider = ({ slider_data }) => {
               type="button"
               onClick={onClickHandler}
               title={label}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 text-white p-3 rounded-full hover:bg-white hover:text-black transition mt-12"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 text-white p-3 rounded-full hover:bg-white hover:text-black transition"
             >
               <IoIosArrowForward size={26} />
             </button>

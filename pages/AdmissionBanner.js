@@ -13,11 +13,13 @@ const AdmissionBanner = () => {
         try {
             const res = await fetch(`${baseUrl}/${school}/items/admission_banner?fields=*.*.*`);
             const data = await res.json();
+            // console.log("Fetched data:", data);  // Log the full fetched data
 
             setBanner(data.data);
 
             if (data.data && data.data.length > 0) {
                 const bannerData = data.data[0];
+                // console.log("bannerData:", bannerData);  // Log banner data
 
                 setShowBanner(bannerData.show_banner); // Set show_banner to decide whether to show the modal
             }
@@ -51,9 +53,11 @@ const AdmissionBanner = () => {
 
     // Get the image URL from the banner's data
     const getImageUrl = (bannerData) => {
+        // console.log("bannerData", bannerData);
 
         // Access the full URL correctly based on the structure of your data
         const url = bannerData?.admission_banner?.data?.full_url?.replace('http://', 'https://');
+        // console.log("Image URL:", url);  // Log the URL to verify it's correct
         return url || ''; // Return the URL or an empty string if not found
     };
 
@@ -92,7 +96,7 @@ const AdmissionBanner = () => {
                             minHeight: '30vh', // Allow modal height to adjust based on content
                             maxHeight: '90vh', // Limit the height for larger screens
                             overflow: 'hidden',
-                            marginTop:"80px"
+                            marginTop:'80px',
                         }}
                     >
                         {/* Close button */}
@@ -114,10 +118,10 @@ const AdmissionBanner = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="30"
                                 height="30"
-                                fill="currentcolor"
+                                fill="currentColor"
                                 className="bi bi-x"
                                 viewBox="0 0 16 16"
-                                style={{ marginTop: "10px" }}
+                                style={{ marginTop: "10px", color:"white" }}
                             >
                                 <path
                                     fillRule="evenodd"

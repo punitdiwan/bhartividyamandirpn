@@ -1,4 +1,3 @@
-
 // build.js
 const { execSync } = require("child_process");
 
