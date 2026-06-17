@@ -39,12 +39,15 @@ const Header = ({ header_data }) => {
                 className="h-32 w-32 md:mr-10"
                 src={schoolData?.logo?.data?.full_url?.replace('http://', 'https://')}
               />
-              <div className="mt-1 text-white item-center ml-1">
-                <span className="font-serif text-2xl tracking-normal sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={{ fontFamily: "'Fugaz One', cursive" }}>
-                  {schoolData?.title}
-                </span>
+              <div className="mt-4 text-white item-center ml-1">
+              <span
+  className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
+  style={{ fontFamily: "'Fugaz One', cursive" }}
+>
+  {schoolData?.title}
+</span>
                 <p className="mt-2 mr-2 sm:justify-items-center text-white text-xl sm:text-2xl md:text-3xl" style={{ fontFamily: "'Fugaz One', cursive" }}>
-                  {schoolData?.address}
+                  {schoolData?.area}
                 </p>
               </div>
             </>

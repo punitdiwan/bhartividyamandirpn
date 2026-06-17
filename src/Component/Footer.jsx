@@ -59,7 +59,7 @@ const Footer = ({ header_data }) => {
               <h3 className="text-white text-lg font-bold mb-6 underline decoration-white/30 underline-offset-8">Contact Us</h3>
               <div className="space-y-4 text-[15px] leading-[1.6] opacity-90">
                 <p>
-                  {schoolData?.address || ""}
+                  {schoolData?.footer_address || ""}
                 </p>
                 <div className="space-y-1">
                   <p><span className="font-bold">Email Address :</span> {schoolData?.email || ""}</p>
