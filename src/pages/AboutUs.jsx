@@ -108,7 +108,7 @@ const AboutUs = () => {
                   <img
                     src={imageUrl || "/images/about.jpg"}
                     alt={item.title}
-                    className="w-full max-w-4xl h-[420px] object-cover rounded-xl shadow-lg"
+                    className="w-full max-w-4xl h-[420px] object-contain rounded-xl shadow-lg"
                   />
                 </div>
               </div>
